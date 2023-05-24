@@ -1,0 +1,189 @@
+# Project: libphp8
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = dllmain.o main/main.o zend/zend.o zend/zend_alloc.o zend/zend_API.o zend/zend_ast.o zend/zend_attributes.o zend/zend_builtin_functions.o zend/zend_closures.o zend/zend_compile.o zend/zend_constants.o zend/zend_cpuinfo.o zend/zend_default_classes.o zend/zend_dtrace.o zend/zend_exceptions.o zend/zend_execute.o zend/zend_execute_API.o zend/zend_extensions.o zend/zend_float.o zend/zend_gc.o zend/zend_gdb.o zend/zend_generators.o zend/zend_hash.o zend/zend_highlight.o zend/zend_inheritance.o zend/zend_ini.o zend/zend_ini_parser.o zend/zend_ini_scanner.o zend/zend_interfaces.o zend/zend_iterators.o zend/zend_language_parser.o zend/zend_language_scanner.o zend/zend_list.o zend/zend_llist.o zend/zend_multibyte.o zend/zend_object_handlers.o zend/zend_objects.o zend/zend_objects_API.o zend/zend_observer.o zend/zend_opcode.o zend/zend_operators.o zend/zend_ptr_stack.o zend/zend_signal.o zend/zend_smart_str.o zend/zend_sort.o zend/zend_stack.o zend/zend_stream.o zend/zend_string.o zend/zend_strtod.o zend/zend_ts_hash.o zend/zend_variables.o zend/zend_virtual_cwd.o zend/zend_vm_opcodes.o zend/zend_weakrefs.o
+LINKOBJ  = dllmain.o main/main.o zend/zend.o zend/zend_alloc.o zend/zend_API.o zend/zend_ast.o zend/zend_attributes.o zend/zend_builtin_functions.o zend/zend_closures.o zend/zend_compile.o zend/zend_constants.o zend/zend_cpuinfo.o zend/zend_default_classes.o zend/zend_dtrace.o zend/zend_exceptions.o zend/zend_execute.o zend/zend_execute_API.o zend/zend_extensions.o zend/zend_float.o zend/zend_gc.o zend/zend_gdb.o zend/zend_generators.o zend/zend_hash.o zend/zend_highlight.o zend/zend_inheritance.o zend/zend_ini.o zend/zend_ini_parser.o zend/zend_ini_scanner.o zend/zend_interfaces.o zend/zend_iterators.o zend/zend_language_parser.o zend/zend_language_scanner.o zend/zend_list.o zend/zend_llist.o zend/zend_multibyte.o zend/zend_object_handlers.o zend/zend_objects.o zend/zend_objects_API.o zend/zend_observer.o zend/zend_opcode.o zend/zend_operators.o zend/zend_ptr_stack.o zend/zend_signal.o zend/zend_smart_str.o zend/zend_sort.o zend/zend_stack.o zend/zend_stream.o zend/zend_string.o zend/zend_strtod.o zend/zend_ts_hash.o zend/zend_variables.o zend/zend_virtual_cwd.o zend/zend_vm_opcodes.o zend/zend_weakrefs.o
+LIBS     = -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib" -L"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/iserver/iserverv2.4/zend/zend" -I"D:/iserver/iserverv2.4/zend/main" -I"D:/iserver/iserverv2.4/zend/include" -I"D:/iserver/iserverv2.4/zend" -I"D:/iserver/iserverv2.4/include"
+CXXINCS  = -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"C:/Program Files (x86)/Embarcadero/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++" -I"D:/iserver/iserverv2.4/zend/zend" -I"D:/iserver/iserverv2.4/zend/main" -I"D:/iserver/iserverv2.4/zend/include" -I"D:/iserver/iserverv2.4/zend" -I"D:/iserver/iserverv2.4/include"
+BIN      = ../debug/bin/zend.dll
+CXXFLAGS = $(CXXINCS) -w -DBUILDING_DLL=1 -DZEND_WIN32=1 -DLIBZEND_EXPORTS=1 -DZEND_DEBUG=1 -DCWD_EXPORTS=1
+CFLAGS   = $(INCS) -w -DBUILDING_DLL=1 -DZEND_WIN32=1 -DLIBZEND_EXPORTS=1 -DZEND_DEBUG=1 -DCWD_EXPORTS=1
+DEL      = C:\Program Files (x86)\Embarcadero\Dev-Cpp\devcpp.exe INTERNAL_DEL
+DEF      = ../debug/bin/libzend.def
+STATIC   = ../debug/bin/libzend.a
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN) $(DEF) $(STATIC)
+
+$(BIN): $(LINKOBJ)
+	$(CC) -shared $(LINKOBJ) -o $(BIN) $(LIBS) -Wl,--output-def,$(DEF),--out-implib,$(STATIC),--add-stdcall-alias
+
+dllmain.o: dllmain.c
+	$(CC) -c dllmain.c -o dllmain.o $(CFLAGS)
+
+main/main.o: main/main.c
+	$(CC) -c main/main.c -o main/main.o $(CFLAGS)
+
+zend/zend.o: zend/zend.c
+	$(CC) -c zend/zend.c -o zend/zend.o $(CFLAGS)
+
+zend/zend_alloc.o: zend/zend_alloc.c
+	$(CC) -c zend/zend_alloc.c -o zend/zend_alloc.o $(CFLAGS)
+
+zend/zend_API.o: zend/zend_API.c
+	$(CC) -c zend/zend_API.c -o zend/zend_API.o $(CFLAGS)
+
+zend/zend_ast.o: zend/zend_ast.c
+	$(CC) -c zend/zend_ast.c -o zend/zend_ast.o $(CFLAGS)
+
+zend/zend_attributes.o: zend/zend_attributes.c
+	$(CC) -c zend/zend_attributes.c -o zend/zend_attributes.o $(CFLAGS)
+
+zend/zend_builtin_functions.o: zend/zend_builtin_functions.c
+	$(CC) -c zend/zend_builtin_functions.c -o zend/zend_builtin_functions.o $(CFLAGS)
+
+zend/zend_closures.o: zend/zend_closures.c
+	$(CC) -c zend/zend_closures.c -o zend/zend_closures.o $(CFLAGS)
+
+zend/zend_compile.o: zend/zend_compile.c
+	$(CC) -c zend/zend_compile.c -o zend/zend_compile.o $(CFLAGS)
+
+zend/zend_constants.o: zend/zend_constants.c
+	$(CC) -c zend/zend_constants.c -o zend/zend_constants.o $(CFLAGS)
+
+zend/zend_cpuinfo.o: zend/zend_cpuinfo.c
+	$(CC) -c zend/zend_cpuinfo.c -o zend/zend_cpuinfo.o $(CFLAGS)
+
+zend/zend_default_classes.o: zend/zend_default_classes.c
+	$(CC) -c zend/zend_default_classes.c -o zend/zend_default_classes.o $(CFLAGS)
+
+zend/zend_dtrace.o: zend/zend_dtrace.c
+	$(CC) -c zend/zend_dtrace.c -o zend/zend_dtrace.o $(CFLAGS)
+
+zend/zend_exceptions.o: zend/zend_exceptions.c
+	$(CC) -c zend/zend_exceptions.c -o zend/zend_exceptions.o $(CFLAGS)
+
+zend/zend_execute.o: zend/zend_execute.c
+	$(CC) -c zend/zend_execute.c -o zend/zend_execute.o $(CFLAGS)
+
+zend/zend_execute_API.o: zend/zend_execute_API.c
+	$(CC) -c zend/zend_execute_API.c -o zend/zend_execute_API.o $(CFLAGS)
+
+zend/zend_extensions.o: zend/zend_extensions.c
+	$(CC) -c zend/zend_extensions.c -o zend/zend_extensions.o $(CFLAGS)
+
+zend/zend_float.o: zend/zend_float.c
+	$(CC) -c zend/zend_float.c -o zend/zend_float.o $(CFLAGS)
+
+zend/zend_gc.o: zend/zend_gc.c
+	$(CC) -c zend/zend_gc.c -o zend/zend_gc.o $(CFLAGS)
+
+zend/zend_gdb.o: zend/zend_gdb.c
+	$(CC) -c zend/zend_gdb.c -o zend/zend_gdb.o $(CFLAGS)
+
+zend/zend_generators.o: zend/zend_generators.c
+	$(CC) -c zend/zend_generators.c -o zend/zend_generators.o $(CFLAGS)
+
+zend/zend_hash.o: zend/zend_hash.c
+	$(CC) -c zend/zend_hash.c -o zend/zend_hash.o $(CFLAGS)
+
+zend/zend_highlight.o: zend/zend_highlight.c
+	$(CC) -c zend/zend_highlight.c -o zend/zend_highlight.o $(CFLAGS)
+
+zend/zend_inheritance.o: zend/zend_inheritance.c
+	$(CC) -c zend/zend_inheritance.c -o zend/zend_inheritance.o $(CFLAGS)
+
+zend/zend_ini.o: zend/zend_ini.c
+	$(CC) -c zend/zend_ini.c -o zend/zend_ini.o $(CFLAGS)
+
+zend/zend_ini_parser.o: zend/zend_ini_parser.c
+	$(CC) -c zend/zend_ini_parser.c -o zend/zend_ini_parser.o $(CFLAGS)
+
+zend/zend_ini_scanner.o: zend/zend_ini_scanner.c
+	$(CC) -c zend/zend_ini_scanner.c -o zend/zend_ini_scanner.o $(CFLAGS)
+
+zend/zend_interfaces.o: zend/zend_interfaces.c
+	$(CC) -c zend/zend_interfaces.c -o zend/zend_interfaces.o $(CFLAGS)
+
+zend/zend_iterators.o: zend/zend_iterators.c
+	$(CC) -c zend/zend_iterators.c -o zend/zend_iterators.o $(CFLAGS)
+
+zend/zend_language_parser.o: zend/zend_language_parser.c
+	$(CC) -c zend/zend_language_parser.c -o zend/zend_language_parser.o $(CFLAGS)
+
+zend/zend_language_scanner.o: zend/zend_language_scanner.c
+	$(CC) -c zend/zend_language_scanner.c -o zend/zend_language_scanner.o $(CFLAGS)
+
+zend/zend_list.o: zend/zend_list.c
+	$(CC) -c zend/zend_list.c -o zend/zend_list.o $(CFLAGS)
+
+zend/zend_llist.o: zend/zend_llist.c
+	$(CC) -c zend/zend_llist.c -o zend/zend_llist.o $(CFLAGS)
+
+zend/zend_multibyte.o: zend/zend_multibyte.c
+	$(CC) -c zend/zend_multibyte.c -o zend/zend_multibyte.o $(CFLAGS)
+
+zend/zend_object_handlers.o: zend/zend_object_handlers.c
+	$(CC) -c zend/zend_object_handlers.c -o zend/zend_object_handlers.o $(CFLAGS)
+
+zend/zend_objects.o: zend/zend_objects.c
+	$(CC) -c zend/zend_objects.c -o zend/zend_objects.o $(CFLAGS)
+
+zend/zend_objects_API.o: zend/zend_objects_API.c
+	$(CC) -c zend/zend_objects_API.c -o zend/zend_objects_API.o $(CFLAGS)
+
+zend/zend_observer.o: zend/zend_observer.c
+	$(CC) -c zend/zend_observer.c -o zend/zend_observer.o $(CFLAGS)
+
+zend/zend_opcode.o: zend/zend_opcode.c
+	$(CC) -c zend/zend_opcode.c -o zend/zend_opcode.o $(CFLAGS)
+
+zend/zend_operators.o: zend/zend_operators.c
+	$(CC) -c zend/zend_operators.c -o zend/zend_operators.o $(CFLAGS)
+
+zend/zend_ptr_stack.o: zend/zend_ptr_stack.c
+	$(CC) -c zend/zend_ptr_stack.c -o zend/zend_ptr_stack.o $(CFLAGS)
+
+zend/zend_signal.o: zend/zend_signal.c
+	$(CC) -c zend/zend_signal.c -o zend/zend_signal.o $(CFLAGS)
+
+zend/zend_smart_str.o: zend/zend_smart_str.c
+	$(CC) -c zend/zend_smart_str.c -o zend/zend_smart_str.o $(CFLAGS)
+
+zend/zend_sort.o: zend/zend_sort.c
+	$(CC) -c zend/zend_sort.c -o zend/zend_sort.o $(CFLAGS)
+
+zend/zend_stack.o: zend/zend_stack.c
+	$(CC) -c zend/zend_stack.c -o zend/zend_stack.o $(CFLAGS)
+
+zend/zend_stream.o: zend/zend_stream.c
+	$(CC) -c zend/zend_stream.c -o zend/zend_stream.o $(CFLAGS)
+
+zend/zend_string.o: zend/zend_string.c
+	$(CC) -c zend/zend_string.c -o zend/zend_string.o $(CFLAGS)
+
+zend/zend_strtod.o: zend/zend_strtod.c
+	$(CC) -c zend/zend_strtod.c -o zend/zend_strtod.o $(CFLAGS)
+
+zend/zend_ts_hash.o: zend/zend_ts_hash.c
+	$(CC) -c zend/zend_ts_hash.c -o zend/zend_ts_hash.o $(CFLAGS)
+
+zend/zend_variables.o: zend/zend_variables.c
+	$(CC) -c zend/zend_variables.c -o zend/zend_variables.o $(CFLAGS)
+
+zend/zend_virtual_cwd.o: zend/zend_virtual_cwd.c
+	$(CC) -c zend/zend_virtual_cwd.c -o zend/zend_virtual_cwd.o $(CFLAGS)
+
+zend/zend_vm_opcodes.o: zend/zend_vm_opcodes.c
+	$(CC) -c zend/zend_vm_opcodes.c -o zend/zend_vm_opcodes.o $(CFLAGS)
+
+zend/zend_weakrefs.o: zend/zend_weakrefs.c
+	$(CC) -c zend/zend_weakrefs.c -o zend/zend_weakrefs.o $(CFLAGS)

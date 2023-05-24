@@ -1,0 +1,8 @@
+EXPORTS
+    SRV_cinstall @1
+    SRV_crun @2
+    SRV_cstart @3
+    SRV_cstatus @4
+    SRV_cstop @5
+    SRV_cunstall @6
+    SRV_cvcinit @7

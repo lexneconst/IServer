@@ -1,0 +1,2 @@
+; dlltool --base-file C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cca00380.base --output-exp libsrv.exp --dllname libsrv.dll --output-def liblibsrv.def --no-export-all-symbols --add-stdcall-alias --exclude-symbol=DllMainCRTStartup@12 --def C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp/cca00380.def --output-lib liblibsrv.a
+EXPORTS

@@ -1,0 +1,26 @@
+EXPORTS
+    _new_str @1
+    _new_str1 @2
+    _newadd_str @3
+    cstring_check @4
+    cstring_clean @5
+    cstring_clear @6
+    cstring_clone @7
+    cstring_create @8
+    cstring_len @9
+    cstring_new @10
+    cstring_newadd @11
+    cstring_newpad @12
+    cstring_remove @13
+    cstring_renew @14
+    cstring_stat @15
+    cstring_str @16
+    efini @17
+    efree @18
+    einit @19
+    emalloc @20
+    fatal @21
+    fatal_fini @22
+    fatal_init @23
+    get_fatal @24
+    getmoduledir @25
